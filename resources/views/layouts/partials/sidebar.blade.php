@@ -37,15 +37,12 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item">
-                            <a href="#"
-                                class="nav-link @php if(request()->routeIs('dashboard')){ echo 'active';}; @endphp">
+                            <a href="{{route('dashboard')}}"class="nav-link @php if(request()->routeIs('dashboard')){ echo 'active';}; @endphp">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Dashboard
-                                </p>
+                                <p>Dashboard</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-user-alt"></i>
                                 <p>
@@ -55,25 +52,17 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Add New</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{route('user.index')}}"class="nav-link @php if(request()->routeIs('user.index')){ echo 'active';}; @endphp">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>All User</p>
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tools"></i>
-                                <p>
-                                    App Settings
-                                </p>
+                            <a href="{{route('user.index')}}"class="nav-link @php if(request()->routeIs('user.index')){ echo 'active';}; @endphp">
+                                <i class="nav-icon fas fa-user-alt"></i>
+                                <p>User</p>
                             </a>
                         </li>
                     </ul>
