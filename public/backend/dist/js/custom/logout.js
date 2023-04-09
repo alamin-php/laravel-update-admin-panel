@@ -19,5 +19,14 @@ $(document).ready(function() {
             })
         })
     }
+    // search function
+    $('#mySearch').on('keyup', function(){
+        var value = $(this).val().toLowerCase();
+        $('#searchData .mydata').filter(function(){
+            $(this).toggle().text().toLowerCase().indexOf(value)>-1;
+        });
+    });
     logout();
+
+
 })
